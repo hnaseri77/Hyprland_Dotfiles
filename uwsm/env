@@ -1,0 +1,14 @@
+# Cursor
+env = XCURSOR_THEME,Bibata-Modern-Classic
+env = XCURSOR_SIZE,24
+env = HYPRCURSOR_THEME,Bibata-Modern-Classic
+env = HYPRCURSOR_SIZE,24
+
+
+
+# NVIDIA Environment Variables for UWSM (Hybrid Setup Optimized)
+export GBM_BACKEND="nvidia-drm"
+export __GLX_VENDOR_LIBRARY_NAME="nvidia"
+export LIBVA_DRIVER_NAME="nvidia"
+#export ELECTRON_OZONE_PLATFORM_HINT="auto"
+# export __GL_GSYNC_ALLOWED="1" # Disabled/Commented out for hybrid laptop
