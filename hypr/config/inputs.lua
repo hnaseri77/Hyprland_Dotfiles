@@ -9,7 +9,7 @@ hl.config({
 	},
 	-- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
 	--cursor = {
-	--no_hardware_cursors = 1,
+	--no_hardware_cursors = 1, -- Uncomment this if you have cursor issues
 	--},
 })
 

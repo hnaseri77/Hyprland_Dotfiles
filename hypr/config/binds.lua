@@ -9,8 +9,7 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 -- Window manipulation
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
---hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
@@ -27,9 +26,6 @@ hl.bind(mainMod .. " + SHIFT + Up", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + Right", hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + Left", hl.dsp.window.move({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + Down", hl.dsp.window.move({ direction = "d" }))
-hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.window.move({ monitor = MONITOR1 }))
-hl.bind(mainMod .. " + SHIFT + 2", hl.dsp.window.move({ monitor = MONITOR2 }))
-hl.bind(mainMod .. " + SHIFT + 3", hl.dsp.window.move({ monitor = MONITOR3 }))
 hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.window.move({ monitor = "-1" }))
 hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.window.move({ monitor = "+1" }))
 hl.bind(mainMod .. " + CONTROL + SHIFT + Right", hl.dsp.window.move({ workspace = "m+1" }))
@@ -78,7 +74,6 @@ end, { repeating = true })
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(launchPrefix .. TERMINAL))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(launchPrefix .. FILE_MANAGER))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(launchPrefix .. EDITOR))
---- hl.bind(mainMod .. " + C",          hl.dsp.exec_cmd(launchPrefix .. CALCULATOR))
 hl.bind("XF86Calculator", hl.dsp.exec_cmd(launchPrefix .. CALCULATOR))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(launchPrefix .. BROWSER))
 hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e btop"))
@@ -126,7 +121,6 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(noctCall .. "panel-toggle clipboard")
 -- Notifications
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center notifications"))
 
-
 -------------------------------
 ---- WORKSPACES & MONITORS ----
 -------------------------------
@@ -145,17 +139,4 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- Workspace rules wiki https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- DP-1 : Workspaces 1-6
-hl.workspace_rule({ workspace = "1", monitor = MONITOR1, default = true, persistent = true })
-hl.workspace_rule({ workspace = "2", monitor = MONITOR1, default = true, persistent = true })
-hl.workspace_rule({ workspace = "3", monitor = MONITOR1, default = true, persistent = true })
-hl.workspace_rule({ workspace = "4", monitor = MONITOR1, default = true, persistent = true })
-hl.workspace_rule({ workspace = "5", monitor = MONITOR1, default = true, persistent = true })
-hl.workspace_rule({ workspace = "6", monitor = MONITOR1, default = true, persistent = true })
 
--- eDP-1 : Workspaces 7-10
-hl.workspace_rule({ workspace = "7", monitor = MONITOR2, default = true, persistent = true })
-hl.workspace_rule({ workspace = "8", monitor = MONITOR2, default = true, persistent = true })
-hl.workspace_rule({ workspace = "9", monitor = MONITOR2, default = true, persistent = true })
-hl.workspace_rule({ workspace = "10", monitor = MONITOR2, default = true, persistent = true })
