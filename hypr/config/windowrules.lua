@@ -12,8 +12,9 @@ hl.window_rule({
 	pin = true,
 })
 
--- Gaming
-local gamingApps = "^(steam_app.*|gamescope|[Ll]utris|[Hh]eroic|[Bb]ottles|[Pp]oly[Mm]c|[Pp]rism[Ll]auncher)$"
+-- Gaming window rules
+-- Only actual games will go fullscreen, NOT the launchers
+local actualGames = ".*(steam_app|gamescope|[Mm]inecraft|lwjgl|org\\.lwjgl).*"
 
 hl.window_rule({
   match = { xdg_tag = "^(.*game.*)$" },
@@ -25,27 +26,25 @@ hl.window_rule({
 hl.window_rule({ match = { class = "^(steam)$", title = "^(Friends List)$" }, float = true })
 
 hl.window_rule({
-  match = { class = "^(steam|[Ll]utris|[Hh]eroic)$", title = "^(Launching\\.{3})$" },
+  match = { class = ".*(steam|[Ll]utris|[Hh]eroic|[Pp]oly[Mm]c|[Pp]rism[Ll]auncher).*", title = "^(Launching\\.{3})$" },
   float = true,
   center = true,
 })
 
+-- Fullscreen rule applied ONLY to actual games
 hl.window_rule({
   match = {
-    class = gamingApps,
-    title = "^(.+)$",
-    initial_title = "negative:^(.*\\\\home\\\\.*)$",
+    class = actualGames,
   },
   content = "game",
   decorate = false,
   fullscreen_state = 2,
-  size = { "monitor_w", "monitor_h" },
   sync_fullscreen = true,
 })
 
 hl.window_rule({
   match = {
-    class = "^(steam_app.*|[Ll]utris|[Hh]eroic|[Bb]ottles)$",
+    class = ".*(steam_app|[Ll]utris|[Hh]eroic|[Bb]ottles).*",
     initial_title = "^$",
   },
   center = true,
