@@ -14,7 +14,7 @@ hl.window_rule({
 
 -- Gaming window rules
 -- Only actual games will go fullscreen, NOT the launchers
-local actualGames = ".*(steam_app|gamescope|[Mm]inecraft|lwjgl|org\\.lwjgl).*"
+local actualGames = ".*(steam_app|gamescope|[Mm]inecraft|lwjgl|org\\.lwjgl|[Ww]ine|.*\\.exe).*"
 
 hl.window_rule({
   match = { xdg_tag = "^(.*game.*)$" },
