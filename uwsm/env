@@ -1,0 +1,34 @@
+# Set Default Environment
+export TERMINAL=kitty
+export EDITOR=nvim
+export VISUAL=nvim
+export BROWSER=brave-browser
+export FILEMANAGER=dolphin
+export FILE_MANAGER=dolphin
+
+
+
+# Cursor
+export XCURSOR_THEME=Bibata-Modern-Classic
+export XCURSOR_SIZE=24
+export HYPRCURSOR_THEME=Bibata-Modern-Classic
+export HYPRCURSOR_SIZE=24
+
+
+# NVIDIA Environment Variables for UWSM (Hybrid Setup Optimized)
+export GBM_BACKEND="nvidia-drm"
+export __GLX_VENDOR_LIBRARY_NAME="nvidia"
+export LIBVA_DRIVER_NAME="nvidia"
+#export ELECTRON_OZONE_PLATFORM_HINT="auto"
+# export __GL_GSYNC_ALLOWED="1" # Disabled/Commented out for hybrid laptop
+
+# Wayland Toolkit Integration
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GDK_BACKEND="wayland,x11,*"
+export ELECTRON_OZONE_PLATFORM_HINT="wayland"
+
+# Force GTK Apps to Dark Theme
+export GTK_THEME=Adwaita:dark
+export COLORSCHEME=prefer-dark
