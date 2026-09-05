@@ -1,0 +1,573 @@
+[accessibility]
+ui_scale = 1.0000000074505806
+
+[audio]
+enable_overdrive = true
+enable_sounds = true
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    capsule_thickness = 0.65999998897314072
+    center = [ "workspaces" ]
+    concave_edge_corners = false
+    end = [ "spacer_1", "tray", "notifications", "keyboard_layout", "network", "bluetooth", "battery", "volume", "session" ]
+    margin_edge = 7
+    margin_ends = 18
+    panel_overlap = 0
+    radius = 0
+    radius_bottom_left = 16
+    radius_bottom_right = 16
+    radius_top_left = 16
+    radius_top_right = 16
+    scale = 0.95000000670552254
+    start = [ "launcher", "clock", "spacer_1", "group:g1" ]
+    thickness = 35
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = ""
+        enabled = false
+        fill = "on_secondary"
+        id = "g1"
+        members = [ "temp", "sysmon_2", "sysmon_3" ]
+        opacity = 1.0
+        padding = 6.0
+
+[battery]
+warning_threshold = 20
+
+    [battery.device."/org/freedesktop/UPower/devices/headset_dev_41_42_FF_20_FE_2E"]
+    warning_threshold = 10
+
+[control_center]
+hidden_tabs = [ "weather" ]
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[hot_corners.top_left]
+action = "launcher"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 1200.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 86400.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    locked_timeout = 60.0
+    timeout = 1260.0
+
+[lockscreen]
+blur_intensity = 0.099999997764825821
+wallpaper = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-school.jpg"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-login-box@WAYLAND-1",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@eDP-1"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 922.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@WAYLAND-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 233.0
+    cy = 315.0
+    output = "WAYLAND-1"
+    placement_height = 497.0
+    placement_width = 466.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@WAYLAND-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 1018.0
+    output = "eDP-1"
+    placement_height = 1200.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+scale = 0.80000000447034836
+
+[osd]
+offset_y = 2
+
+[plugin_settings."nightwatch75/dns-switcher"]
+custom_1 = "Shecan = 178.22.122.100 185.51.200.2"
+custom_2 = "Control D = 76.76.2.0 76.76.10.0"
+custom_3 = "DNS.WATCH = 84.200.69.80 84.200.70.40"
+custom_4 = "Level 3 = 4.2.2.2 4.2.2.4"
+custom_5 = "Mixed = 8.8.8.8 1.1.1.1"
+
+[plugins]
+enabled = [ "nightwatch75/dns-switcher" ]
+
+[shell]
+avatar_path = "/home/cat/Documents/satoru-gojo-8k-7680x4320-15315.jpg"
+clipboard_auto_paste = "off"
+clipboard_confirm_clear_history = false
+clipboard_image_action_command = "satty -f -"
+lang = "en"
+launch_apps_as_systemd_services = true
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+settings_show_advanced = true
+
+    [shell.animation]
+    speed = 0.65000000968575478
+
+    [shell.greeter_sync]
+    auto_sync = false
+
+    [shell.keyboard_layout.custom_labels]
+    "English (US)" = "us"
+    Persian = "ir"
+
+    [shell.launcher]
+    categories = false
+
+    [shell.panel]
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    session_placement = "floating"
+    session_position = "center"
+
+    [shell.screenshot]
+    confirm_region = true
+    copy_to_clipboard = true
+    directory = "/home/cat/Pictures/Screenshots"
+    pipe_command = "satty -f -"
+    pipe_to_command = true
+    remember_last_region = true
+    save_to_file = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 3.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[system.monitor]
+gpu_poll_seconds = 2
+
+[theme]
+builtin = "Ayu"
+community_palette = "Gruvbox Material Hard"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-rainbow"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
+    enable_community_templates = false
+
+[wallpaper]
+directory = "/home/cat/Pictures/wallpapers/wallpapers"
+per_monitor_directories = true
+
+    [wallpaper.default]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/bmw-m3-angel-eyes-black-background-5k-5000x3000-896.jpg"
+
+    [wallpaper.last]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
+
+    [wallpaper.monitor.eDP-1]
+    directory_light = ""
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ozkzl.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
+
+    [[wallpaper.favorite]]
+    community_palette = "Gruvbox Material Hard"
+    palette_source = "community"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ozkzl.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-o397yp.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-96kg7d.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-m9opdm.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    community_palette = "Gruvbox Material Hard"
+    palette_source = "community"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-1kkkqw.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-3lzjev.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-47y2e4.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-v9m2r8.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Kanagawa"
+    palette_source = "builtin"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ll7dx.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-xe762v.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-5w8x13.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yxqwr7.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-9mxz8k.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/black-white-girl.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/girl-roof.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj2ky-2048x2048.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    community_palette = "Gruvbox Material Hard"
+    palette_source = "community"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-6lyo7x-7168x3968.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-po7ywj-1920x1080.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yxorgx_upscayl_2x_digital-art-4x.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-qzmg1r_upscayl_2x_digital-art-4x.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-5g26o9.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-135vl3.png"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-o3lor5.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-p9k3e3.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/choso-red-aesthetic-5120x2880-26047.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/gargantua-black-5200x3250-9621.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/Sword Black.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/Sword Silver Hair.png"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-school.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    community_palette = "ADW"
+    palette_source = "community"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-katana-tattoo-8k-.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/pexels-viktoriia-kondratiuk-458099300-17925040.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yqg6r7.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6k3oox.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-wyv6p7.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Kanagawa"
+    palette_source = "builtin"
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-vpe9w8-6000x3383.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-3q66wd-2048x1462.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-w5dgxr-5756x3238.jpg"
+    theme_mode = "auto"
+
+[weather]
+enabled = false
+
+[widget.active_window]
+enabled = false
+
+[widget.battery]
+color = "secondary"
+
+[widget.bluetooth]
+color = "secondary"
+hide_when_adapter_off = true
+
+[widget.clock]
+color = "secondary"
+format = "{:%H:%M %A %m/%d/%y}"
+
+[widget.keyboard_layout]
+color = "secondary"
+
+[widget.launcher]
+color = "secondary"
+
+[widget.media]
+enabled = false
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.network]
+color = "secondary"
+
+[widget.notifications]
+color = "secondary"
+
+[widget.session]
+color = "error"
+
+[widget.spacer_1]
+enabled = false
+type = "spacer"
+
+[widget.spacer_2]
+enabled = false
+type = "spacer"
+
+[widget.sysmon_2]
+glyph = "gpu-usage"
+stat = "gpu_temp"
+type = "sysmon"
+
+[widget.sysmon_3]
+glyph = "cpu-2"
+stat = "ram_used"
+type = "sysmon"
+
+[widget.temp]
+
+[widget.tray]
+capsule = true
+capsule_fill = "on_secondary"
+
+[widget.volume]
+color = "secondary"
+
+[widget.workspaces]
+active_pill_size = 2.5
+capsule = true
+capsule_fill = "on_primary"
+inactive_pill_size = 1.0
+label_source = "id"
+pill_scale = 0.5
+show_labels = false
