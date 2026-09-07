@@ -17,10 +17,10 @@ export HYPRCURSOR_SIZE=24
 
 # NVIDIA Environment Variables for UWSM (Hybrid Setup Optimized)
 export GBM_BACKEND="nvidia-drm"
-export __GLX_VENDOR_LIBRARY_NAME="nvidia"
+#export __GLX_VENDOR_LIBRARY_NAME="nvidia" # Disabled/Commented out for hybrid laptop
 export LIBVA_DRIVER_NAME="nvidia"
 #export ELECTRON_OZONE_PLATFORM_HINT="auto"
-# export __GL_GSYNC_ALLOWED="1" # Disabled/Commented out for hybrid laptop
+# export __GL_GSYNC_ALLOWED="1"
 
 # Wayland Toolkit Integration
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
