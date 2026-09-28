@@ -7,7 +7,7 @@ Minimal Hyprland desktop configuration running on Fedora with Noctalia Shell and
 - **WM:** Hyprland (managed via UWSM)
 - **Shell:** Noctalia
 - **Terminal:** Kitty
-- **GPU:** NVIDIA (Nvidia environment variables and hardware acceleration enabled)
+- **GPU Setup:** Hybrid Graphics (Intel iGPU + NVIDIA dGPU)
 
 ## Included Configurations
 
@@ -16,6 +16,15 @@ Minimal Hyprland desktop configuration running on Fedora with Noctalia Shell and
 - `noctalia/` - Shell and bar setup
 - `kitty/` - Terminal emulator configuration
 
-## NVIDIA Note
+## GPU & Hardware Acceleration Setup
 
-This config includes NVIDIA-specific environment variables in `uwsm` and `hypr` for Wayland compatibility.
+This configuration is optimized out-of-the-box for **Hybrid Laptops (Intel/AMD + NVIDIA)** for optimal battery life and Wayland stability:
+
+- **Desktop & Video Playback:** Runs on Intel iGPU with hardware decoding (`LIBVA_DRIVER_NAME="iHD"`).
+- **Heavy Workloads & Games:** Automatically utilizes the NVIDIA dGPU as needed by the system.
+
+### Note for NVIDIA-Only / Desktop Users
+If you are running a single NVIDIA GPU (desktop system), adjust your `uwsm` environment config:
+- Set `export LIBVA_DRIVER_NAME="nvidia"`
+- Uncomment `export GBM_BACKEND="nvidia-drm"`
+- Uncomment `export __GLX_VENDOR_LIBRARY_NAME="nvidia"`
