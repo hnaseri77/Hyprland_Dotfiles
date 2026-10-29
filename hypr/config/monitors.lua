@@ -1,5 +1,6 @@
--- Monitor wiki: https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- Monitor wiki: https://wiki.hypr.land/configuring/core/monitors/
 -- Outputs are defined in variables.lua (MONITOR1 and MONITOR2)
+-- Tailored for Hyprland v0.57+
 
 -- External ASUS Monitor (1080p @ 100Hz)
 hl.monitor({
@@ -10,6 +11,8 @@ hl.monitor({
   cm = "srgb",                -- Set color management preset to standard sRGB
   supports_hdr = -1,          -- Force HDR off (-1 = off, 0 = auto, 1 = on)
   supports_wide_color = -1,   -- Force wide color gamut off to avoid color/bitdepth conflicts
+  vrr = 0,                    -- Variable Refresh Rate (0 = off, 1 = on, 2 = fullscreen only)
+  transform = 0,              -- Monitor orientation transform (0 = normal/no transform, 1-7 = rotations/flips)
 })
 
 -- Laptop Display (3840x2400 @ 59.99Hz)
@@ -21,4 +24,6 @@ hl.monitor({
   cm = "srgb",                -- Set color management preset to standard sRGB
   supports_hdr = -1,          -- Force HDR off (-1 = off, 0 = auto, 1 = on)
   supports_wide_color = -1,   -- Force wide color gamut off to prevent sudden brightness jumps
+  vrr = 0,                    -- Variable Refresh Rate (0 = off, 1 = on, 2 = fullscreen only)
+  transform = 0,              -- Monitor orientation transform (0 = normal/no transform, 1-7 = rotations/flips)
 })
