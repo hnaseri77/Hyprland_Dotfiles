@@ -1,34 +1,76 @@
 [accessibility]
-ui_scale = 1.0000000074505806
+high_contrast = false
+ui_scale = 1.0
 
 [audio]
+enable_notification_sounds = true
 enable_overdrive = true
+enable_power_sounds = true
+enable_screenshot_sounds = true
 enable_sounds = true
+enable_volume_sounds = true
+sound_theme = "freedesktop"
+sound_volume = 0.5
+
+[backdrop]
+blur_intensity = 0.5
+enabled = false
+tint_intensity = 0.30000001192092896
 
 [bar]
 order = [ "default" ]
 
     [bar.default]
-    capsule_thickness = 0.65999998897314072
+    auto_hide = false
+    auto_hide_delay_ms = 0
+    background_opacity = 1.0
+    border = "outline_variant"
+    border_width = 0.0
+    capsule = false
+    capsule_border_width = 1.0
+    capsule_fill = "surface_container"
+    capsule_opacity = 1.0
+    capsule_padding = 6.0
+    capsule_thickness = 0.65999996662139893
     center = [ "workspaces" ]
+    compositor_blur = true
     concave_edge_corners = false
+    contact_shadow = false
+    enabled = true
     end = [ "spacer_1", "tray", "notifications", "keyboard_layout", "network", "bluetooth", "battery", "volume", "session" ]
+    font_scale = 1.0
+    font_weight = 500
+    hover_highlight = true
+    layer = "top"
     margin_edge = 7
     margin_ends = 18
+    margin_opposite_edge = 0
+    padding = 14
     panel_overlap = 0
+    position = "top"
     radius = 0
     radius_bottom_left = 16
     radius_bottom_right = 16
     radius_top_left = 16
     radius_top_right = 16
-    scale = 0.95000000670552254
+    reserve_space = true
+    scale = 0.94999998807907104
+    shadow = true
+    show_on_workspace_switch = true
+    show_tooltip = true
+    smart_auto_hide = false
     start = [ "launcher", "clock", "spacer_1", "group:g1" ]
     thickness = 35
+    widget_spacing = 6
+
+        [bar.default.dead_zone]
+        click_through = false
 
         [[bar.default.capsule_group]]
         accordion = false
         accordion_direction = "end"
         border = ""
+        border_width = 1.0
         enabled = false
         fill = "on_secondary"
         id = "g1"
@@ -40,47 +82,219 @@ order = [ "default" ]
 warning_threshold = 20
 
     [battery.device."/org/freedesktop/UPower/devices/headset_dev_41_42_FF_20_FE_2E"]
-    warning_threshold = 10
+    warning_threshold = 20
+
+[bluetooth]
+connect_when_enabled = false
+connection_notifications = true
+
+[brightness]
+enable_ddcutil = false
+ignore_mmids = []
+minimum_brightness = 0.0
+sync_all_monitors = false
+
+[calendar]
+dedupe_events = false
+dedupe_ignore_patterns = []
+enabled = false
+event_date_format = "%A %e %B"
+event_time_format = "%H:%M"
+refresh_minutes = 15
+
+    [calendar.reminders]
+    all_day_digest_time = "09:00"
+    default_lead_minutes = 10
+    enabled = true
+    use_event_reminders = true
 
 [control_center]
+circular_avatar = true
 hidden_tabs = [ "weather" ]
+show_avatar_border = true
+show_session_button = true
+show_shortcut_labels = true
+sidebar = "compact"
+sidebar_section = "compact"
+width = 700
+
+    [control_center.calendar]
+    hide_past_events = false
+    past_events_threshold_minutes = 30
+    show_events_card = true
+    show_week_numbers = false
+
+    [control_center.media]
+    show_visualizer = true
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
 
 [desktop_widgets]
+enabled = true
 schema_version = 2
-widget_order = []
 
     [desktop_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
 
-    [desktop_widgets.widget]
+[dock]
+active_monitor_only = false
+active_opacity = 1.0
+active_scale = 1.0
+auto_hide = false
+background_opacity = 0.87999999523162842
+border = "outline_variant"
+border_width = 0.0
+concave_edge_corners = true
+cross_axis_padding = 8
+enabled = false
+icon_size = 48
+inactive_opacity = 0.85000002384185791
+inactive_scale = 0.85000002384185791
+item_spacing = 6
+launcher_custom_image = ""
+launcher_custom_image_colorize = false
+launcher_icon = "grid-dots"
+launcher_position = "none"
+layer = "top"
+magnification = true
+magnification_scale = 1.4500000476837158
+main_axis_padding = 16
+margin_edge = 0
+margin_ends = 0
+pinned = []
+position = "bottom"
+radius = 16
+radius_bottom_left = 16
+radius_bottom_right = 16
+radius_top_left = 16
+radius_top_right = 16
+reserve_space = true
+shadow = true
+show_dots = false
+show_instance_count = true
+show_running = true
+smart_auto_hide = false
 
-[hot_corners.top_left]
-action = "launcher"
+[hooks]
+battery_charging = []
+battery_discharging = []
+battery_percentage_changed = []
+battery_plugged = []
+bluetooth_disabled = []
+bluetooth_enabled = []
+colors_changed = []
+logging_out = []
+power_profile_changed = []
+rebooting = []
+session_locked = []
+session_unlocked = []
+shutting_down = []
+started = []
+theme_mode_changed = []
+wallpaper_changed = []
+wifi_disabled = []
+wifi_enabled = []
+
+[hot_corners]
+delay_ms = 0
+enabled = false
+
+    [hot_corners.bottom_left]
+    action = "none"
+    command = ""
+
+    [hot_corners.bottom_right]
+    action = "none"
+    command = ""
+
+    [hot_corners.top_left]
+    action = "launcher"
+    command = ""
+
+    [hot_corners.top_right]
+    action = "none"
+    command = ""
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 2.0
 
     [idle.behavior.lock]
     action = "lock"
+    command = ""
     enabled = true
+    locked_timeout = 0.0
+    resume_command = ""
     timeout = 1200.0
 
     [idle.behavior.lock-and-suspend]
     action = "lock_and_suspend"
+    command = ""
     enabled = true
+    locked_timeout = 0.0
+    resume_command = ""
     timeout = 86400.0
 
     [idle.behavior.screen-off]
     action = "screen_off"
+    command = ""
     enabled = true
     locked_timeout = 60.0
+    resume_command = ""
     timeout = 1260.0
 
+[keybinds]
+cancel = [ "Escape" ]
+copy = [ "Ctrl+c" ]
+delete = [ "Delete" ]
+down = [ "Down" ]
+left = [ "Left" ]
+right = [ "Right" ]
+save = [ "Ctrl+s" ]
+tab_next = [ "Tab" ]
+tab_previous = [ "Shift+ISO_Left_Tab" ]
+up = [ "Up" ]
+validate = [ "Return", "KP_Enter", "space" ]
+
+[location]
+address = ""
+auto_locate = false
+custom_schedule = false
+sunrise = ""
+sunset = ""
+
 [lockscreen]
-blur_intensity = 0.099999997764825821
-wallpaper = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-school.jpg"
+allow_empty_password = false
+blur_intensity = 0.0
+blurred_desktop = false
+edge_smoothness = 0.29999998211860657
+enabled = true
+fingerprint = true
+grace_period_seconds = 0
+lock_before_suspend = true
+monitors = []
+tint_intensity = 0.30000001192092896
+transition = [ "fade", "wipe", "disc", "stripes", "zoom", "honeycomb", "vortex", "pixel", "diamond", "golden", "melt" ]
+transition_duration = 1600.0
+wallpaper = "/home/cat/Pictures/wallpapers/wallpapers/Sword Silver Hair.png"
 
 [lockscreen_widgets]
 enabled = false
@@ -102,6 +316,7 @@ widget_order = [
     box_width = 810.0
     cx = 960.0
     cy = 922.0
+    enabled = true
     output = "DP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -109,7 +324,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -129,6 +344,7 @@ widget_order = [
     box_width = 810.0
     cx = 960.0
     cy = 898.0
+    enabled = true
     output = "FALLBACK"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -136,7 +352,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -156,6 +372,7 @@ widget_order = [
     box_width = 720.0
     cx = 233.0
     cy = 315.0
+    enabled = true
     output = "WAYLAND-1"
     placement_height = 497.0
     placement_width = 466.0
@@ -163,7 +380,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@WAYLAND-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -183,6 +400,7 @@ widget_order = [
     box_width = 810.0
     cx = 960.0
     cy = 1018.0
+    enabled = true
     output = "eDP-1"
     placement_height = 1200.0
     placement_width = 1920.0
@@ -190,7 +408,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -205,36 +423,147 @@ widget_order = [
         show_unlock_hint = true
         show_weather = true
 
+[nightlight]
+enabled = false
+force = false
+temperature_day = 6500
+temperature_night = 4000
+
 [notification]
-scale = 0.80000000447034836
+background_opacity = 0.97000002861022949
+border = true
+border_color = "outline_variant"
+border_width = 1.0
+collapse_on_dismiss = true
+enable_daemon = true
+follow_focused_output = false
+history_retention_hours = 0
+keep_dismissed_in_history = true
+layer = "top"
+max_visible = 0
+monitors = []
+offset_x = 20
+offset_y = 8
+position = "top_right"
+scale = 0.80000001192092896
+show_actions = true
+show_app_name = true
+width = 360
 
 [osd]
+background_opacity = 0.97000002861022949
+border = true
+border_color = "outline_variant"
+border_width = 1.0
+enabled = true
+follow_focused_output = false
+hide_delay_ms = 1400
+monitors = []
+offset_x = 20
 offset_y = 2
+orientation = "horizontal"
+position = "top_center"
+position_vertical = "top_center"
+scale = 1.0
+
+    [osd.kinds]
+    bluetooth = true
+    brightness = true
+    caffeine = true
+    custom = true
+    dnd = true
+    keyboard_backlight = true
+    keyboard_layout = true
+    lock_keys = true
+    media = true
+    nightlight = true
+    power_profile = true
+    privacy = true
+    volume = true
+    volume_input = true
+    volume_output = true
+    wifi = true
+
+[plugin_settings."andrewdems/vpn-manager"]
+auto_disconnect_on_trusted = false
+trust_all_ethernet = false
 
 [plugin_settings."nightwatch75/dns-switcher"]
 custom_1 = "Shecan = 178.22.122.100 185.51.200.2"
 custom_2 = "Control D = 76.76.2.0 76.76.10.0"
 custom_3 = "DNS.WATCH = 84.200.69.80 84.200.70.40"
 custom_4 = "Level 3 = 4.2.2.2 4.2.2.4"
-custom_5 = "Mixed = 8.8.8.8 1.1.1.1"
+custom_5 = ""
+
+[plugin_settings."noctalia/mpvpaper"]
+auto_pause = "max"
+cpu_quota = 30
+cpu_weight = 10
+nice = 19
+run_as_systemd = true
+video_directory = "/home/cat/Pictures/wallp"
 
 [plugins]
+auto_update = "all"
 enabled = [ "nightwatch75/dns-switcher" ]
 
+    [[plugins.source]]
+    enabled = true
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = true
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
 [shell]
-avatar_path = "/home/cat/Documents/satoru-gojo-8k-7680x4320-15315.jpg"
+app_icon_colorize = false
+avatar_path = "/home/cat/Documents/Profile/cat.jpg"
+button_borders = true
+card_borders = true
 clipboard_auto_paste = "off"
 clipboard_confirm_clear_history = false
+clipboard_enabled = true
+clipboard_history_max_entries = 100
 clipboard_image_action_command = "satty -f -"
+clipboard_keep_from_closed_apps = true
+corner_radius_scale = 1.0
+date_format = "%A, %x"
+disable_mipmaps = false
+external_ip_enabled = false
+font_family = "sans-serif"
+input_borders = true
 lang = "en"
 launch_apps_as_systemd_services = true
+launch_apps_custom_command = ""
+niri_overview_close_on_launch_enabled = false
+niri_overview_type_to_launch_enabled = false
+offline_mode = false
 password_style = "random"
 polkit_agent = true
-screen_time_enabled = true
+popup_borders = true
+popup_shadows = true
+readline_shortcuts = false
+screen_time_enabled = false
+settings_expand_all_groups = false
 settings_show_advanced = true
+settings_window_translucent = false
+setup_wizard_enabled = true
+shared_gl_context = true
+show_close_buttons = true
+show_location = true
+telemetry_enabled = false
+time_format = "{:%H:%M}"
+umbriel_audio_provider_enabled = false
+umbriel_overview_close_on_launch_enabled = false
+umbriel_overview_type_to_launch_enabled = false
 
     [shell.animation]
-    speed = 0.65000000968575478
+    enabled = true
+    speed = 0.65000003576278687
 
     [shell.greeter_sync]
     auto_sync = false
@@ -244,297 +573,369 @@ settings_show_advanced = true
     Persian = "ir"
 
     [shell.launcher]
+    app_grid = false
+    auto_paste = "auto"
     categories = false
+    category_icons_only = false
+    compact = false
+    default_view = "all"
+    fetch_exchange_rates = true
+    ignore_mouse = false
+    layout = "full"
+    pinned = []
+    provider_prefix = "/"
+    search_position = "top"
+    show_app_actions = false
+    show_app_origin_indicator = true
+    show_icons = true
+    show_navigation_labels = true
+    show_session_button = true
+    show_settings_button = true
+    sort_by_usage = true
+    track_usage = true
+    width = 760
+
+        [shell.launcher.dmenu]
+
+        [shell.launcher.panels]
+        ignored = [ "polkit", "setup-wizard", "test", "launcher" ]
+
+    [shell.mpris]
+    blacklist = []
 
     [shell.panel]
+    border_color = "outline_variant"
+    border_width = 1.0
+    borders = true
+    clipboard_placement = "floating"
+    clipboard_position = "center"
+    control_center_placement = "attached"
+    control_center_position = "auto"
+    floating_layer = "overlay"
+    floating_offset = 8
+    launcher_placement = "floating"
+    launcher_position = "center"
+    list_item_background = false
     open_near_click_clipboard = true
     open_near_click_control_center = true
+    open_near_click_launcher = false
+    open_near_click_session = false
+    open_near_click_wallpaper = false
+    polkit_placement = "floating"
+    polkit_position = "center"
     session_placement = "floating"
     session_position = "center"
+    shadow = true
+    transparency_mode = "solid"
+    wallpaper_placement = "attached"
+    wallpaper_position = "auto"
+    wallpaper_show_names = true
+
+    [shell.privacy]
+    cam_filter_regex = ""
+    mic_filter_regex = ""
+    screen_filter_regex = ""
+
+    [shell.screen_corners]
+    enabled = false
+    size = 32
 
     [shell.screenshot]
+    annotate = false
+    close_on_copy = true
+    close_on_save = true
     confirm_region = true
+    copy_on_close = false
     copy_to_clipboard = true
     directory = "/home/cat/Pictures/Screenshots"
+    filename_pattern = ""
+    format = "png"
+    freeze_screen = true
     pipe_command = "satty -f -"
     pipe_to_command = true
+    quality = 90
+    region_border_width = 2.0
+    region_dim_opacity = 0.64999997615814209
+    region_modifier = "none"
     remember_last_region = true
     save_to_file = true
+    show_cursor = false
+    show_region_dimensions = true
+    show_region_hint = true
+    skip_annotate_on_copy_save = false
 
-    [[shell.session.actions]]
-    action = "lock"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "1"
-    variant = "default"
+    [shell.session]
+    grid = false
+    grid_columns = 3
+    show_shortcuts = true
 
-    [[shell.session.actions]]
-    action = "logout"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "2"
-    variant = "default"
+        [shell.session.power]
 
-    [[shell.session.actions]]
-    action = "lock_and_suspend"
-    countdown_seconds = 3.0
-    enabled = true
-    shortcut = "3"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "lock"
+        command = ""
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "1"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "reboot"
-    countdown_seconds = 3.0
-    enabled = true
-    shortcut = "4"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "logout"
+        command = ""
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "2"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "shutdown"
-    countdown_seconds = 3.0
-    enabled = true
-    shortcut = "5"
-    variant = "destructive"
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        command = ""
+        countdown_seconds = 3.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        command = ""
+        countdown_seconds = 3.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot_uefi"
+        command = "notify-send 'Noctalia' 'Custom session entry'"
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "5"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        command = ""
+        countdown_seconds = 3.0
+        enabled = true
+        glyph = ""
+        label = ""
+        lockscreen_shortcut = ""
+        shortcut = "6"
+        variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.55000001192092896
+    direction = "down"
+
+    [shell.window_switcher]
+    current_workspace_only = false
+    mru = false
+    show_all_outputs = true
+    show_app_icon = true
+    show_caption = true
+    show_count = true
+    style = "carousel"
+
+[storage]
+key_file = ""
+key_source = "secret-service"
 
 [system.monitor]
-gpu_poll_seconds = 2
+cpu_freq_activity_threshold = 2.5
+cpu_freq_critical_threshold = 4.5
+cpu_poll_seconds = 2.0
+cpu_temp_activity_threshold = 60.0
+cpu_temp_critical_threshold = 85.0
+cpu_temp_sensor_path = ""
+cpu_usage_activity_threshold = 50.0
+cpu_usage_critical_threshold = 90.0
+disk_free_activity_threshold = 80.0
+disk_free_critical_threshold = 95.0
+disk_free_pct_activity_threshold = 80.0
+disk_free_pct_critical_threshold = 95.0
+disk_poll_seconds = 10.0
+disk_used_activity_threshold = 80.0
+disk_used_critical_threshold = 95.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 95.0
+enabled = true
+gpu_poll_seconds = 2.0
+gpu_temp_activity_threshold = 60.0
+gpu_temp_critical_threshold = 85.0
+gpu_usage_activity_threshold = 50.0
+gpu_usage_critical_threshold = 95.0
+gpu_vram_activity_threshold = 50.0
+gpu_vram_critical_threshold = 90.0
+memory_poll_seconds = 2.0
+net_rx_activity_threshold = 1.0
+net_rx_critical_threshold = 50.0
+net_tx_activity_threshold = 1.0
+net_tx_critical_threshold = 50.0
+network_poll_seconds = 3.0
+ram_pct_activity_threshold = 60.0
+ram_pct_critical_threshold = 90.0
+swap_pct_activity_threshold = 20.0
+swap_pct_critical_threshold = 80.0
 
 [theme]
-builtin = "Ayu"
+builtin = "Kanagawa"
 community_palette = "Gruvbox Material Hard"
+custom_palette = ""
 mode = "dark"
+pure_black_dark = false
+shell_mode = "follow"
 source = "community"
+sync_color_scheme = true
 wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
+    community_ids = []
+    enable_builtin_templates = true
     enable_community_templates = false
 
 [wallpaper]
 directory = "/home/cat/Pictures/wallpapers/wallpapers"
+directory_dark = ""
+directory_light = ""
+edge_smoothness = 0.30000001192092896
+enabled = true
+fill_color = ""
+fill_mode = "crop"
 per_monitor_directories = true
+transition = [ "fade", "wipe", "disc", "stripes", "zoom", "honeycomb", "vortex", "pixel", "diamond", "golden", "melt" ]
+transition_duration = 1500.0
+transition_on_startup = false
 
-    [wallpaper.default]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/bmw-m3-angel-eyes-black-background-5k-5000x3000-896.jpg"
-
-    [wallpaper.last]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
+    [wallpaper.automation]
+    enabled = false
+    interval_seconds = 1800
+    order = "random"
+    recursive = false
 
     [wallpaper.monitor.eDP-1]
     directory_light = ""
-
-    [wallpaper.monitors.DP-1]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ozkzl.jpg"
-
-    [wallpaper.monitors.eDP-1]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
-
-    [[wallpaper.favorite]]
-    community_palette = "Gruvbox Material Hard"
-    palette_source = "community"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ozkzl.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-o397yp.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-96kg7d.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-m9opdm.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    community_palette = "Gruvbox Material Hard"
-    palette_source = "community"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-1kkkqw.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-3lzjev.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-47y2e4.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-v9m2r8.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Kanagawa"
-    palette_source = "builtin"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6ll7dx.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-xe762v.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-5w8x13.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yxqwr7.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-9mxz8k.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/black-white-girl.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/girl-roof.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj2ky-2048x2048.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    community_palette = "Gruvbox Material Hard"
-    palette_source = "community"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-lyj56q-3840x1750.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-6lyo7x-7168x3968.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-po7ywj-1920x1080.jpg"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yxorgx_upscayl_2x_digital-art-4x.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-qzmg1r_upscayl_2x_digital-art-4x.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-5g26o9.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-135vl3.png"
-    theme_mode = "dark"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-o3lor5.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-p9k3e3.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/choso-red-aesthetic-5120x2880-26047.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/gargantua-black-5200x3250-9621.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/Sword Black.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/Sword Silver Hair.png"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-school.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    community_palette = "ADW"
-    palette_source = "community"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/anime-girl-katana-tattoo-8k-.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/pexels-viktoriia-kondratiuk-458099300-17925040.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-yqg6r7.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-6k3oox.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/wallhaven-wyv6p7.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    builtin_palette = "Kanagawa"
-    palette_source = "builtin"
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-vpe9w8-6000x3383.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-3q66wd-2048x1462.jpg"
-    theme_mode = "auto"
-
-    [[wallpaper.favorite]]
-    path = "/home/cat/Pictures/wallpapers/wallpapers/4kwall-w5dgxr-5756x3238.jpg"
-    theme_mode = "auto"
+    match = "eDP-1"
 
 [weather]
+effects = true
 enabled = false
+refresh_minutes = 30
+unit = "metric"
 
 [widget.active_window]
 enabled = false
+icon_size = 14.0
+max_length = 260.0
+min_length = 80.0
+title_scroll = "none"
+type = "active_window"
+
+[widget.audio_visualizer]
+type = "audio_visualizer"
+width = 153
 
 [widget.battery]
 color = "secondary"
+type = "battery"
 
 [widget.bluetooth]
 color = "secondary"
 hide_when_adapter_off = true
+type = "bluetooth"
+
+[widget.caffeine]
+color = "secondary"
+type = "caffeine"
 
 [widget.clock]
 color = "secondary"
 format = "{:%H:%M %A %m/%d/%y}"
+type = "clock"
+
+[widget.cpu]
+stat = "cpu_usage"
+type = "sysmon"
+
+[widget.date]
+format = "{:%a %d %b}"
+type = "clock"
+
+[widget.input_volume]
+device = "input"
+type = "volume"
 
 [widget.keyboard_layout]
 color = "secondary"
+hide_when_single_layout = false
+type = "keyboard_layout"
 
 [widget.launcher]
 color = "secondary"
+type = "launcher"
+
+[widget.lock_keys]
+display = "short"
+hide_when_off = false
+show_caps_lock = true
+show_num_lock = true
+show_scroll_lock = false
+type = "lock_keys"
 
 [widget.media]
-enabled = false
+art_size = 16.0
+enabled = true
 hide_when_no_media = true
+max_length = 220.0
+min_length = 80.0
 title_scroll = "on_hover"
+type = "media"
 
 [widget.network]
 color = "secondary"
+type = "network"
+
+[widget.network_rx]
+stat = "net_rx"
+type = "sysmon"
+
+[widget.network_tx]
+stat = "net_tx"
+type = "sysmon"
 
 [widget.notifications]
 color = "secondary"
+type = "notifications"
+
+[widget.output_volume]
+device = "output"
+type = "volume"
+
+[widget.ram]
+stat = "ram_used"
+type = "sysmon"
 
 [widget.session]
 color = "error"
+type = "session"
+
+[widget.spacer]
+interactive = false
+type = "spacer"
 
 [widget.spacer_1]
 enabled = false
@@ -555,19 +956,24 @@ stat = "ram_used"
 type = "sysmon"
 
 [widget.temp]
+stat = "cpu_temp"
+type = "sysmon"
 
 [widget.tray]
 capsule = true
 capsule_fill = "on_secondary"
+type = "tray"
 
 [widget.volume]
 color = "secondary"
+type = "volume"
 
 [widget.workspaces]
 active_pill_size = 2.5
-capsule = true
+capsule = false
 capsule_fill = "on_primary"
 inactive_pill_size = 1.0
 label_source = "id"
 pill_scale = 0.5
 show_labels = false
+type = "workspaces"
