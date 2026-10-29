@@ -8,13 +8,14 @@ hl.config({
 		kb_options = "caps:none, grp:alt_shift_toggle",
 		follow_mouse = 1,
 		touchpad = {
-            natural_scroll = false,
+	            natural_scroll = false,
           },
 	},
 	-- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
-	--cursor = {
-	--no_hardware_cursors = 1, -- Uncomment this if you have cursor issues
-	--},
+	cursor = {
+		no_warps = false,
+	--        no_hardware_cursors = 1, -- Uncomment this if you have cursor issues
+	},
 })
 
 hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
