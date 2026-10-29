@@ -6,7 +6,7 @@ hl.config({
 		gaps_out = 20,
 		border_size = 2,
 		extend_border_grab_area = 10,
-		resize_on_border = true,
+		resize_on_border = true, -- Allows resizing windows by dragging borders with the mouse
 		col = {
 			active_border = {
 				colors = { CACHYLGREEN, CACHYDGREEN },
@@ -39,8 +39,9 @@ hl.config({
 		fullscreen_opacity = 1,
 		blur = {
 			size = 5,
-			passes = 4,
-			special = true,
+			passes = 3,          -- Reduced from 4 to 3: Lowers GPU/CPU load, keeping animations buttery smooth on Intel iGPU
+			new_optimizations = true, -- v0.57.0 feature: Enables advanced rendering optimizations for better performance and battery life
+			special = true,      -- Enables blur on special workspaces (like scratchpads)
 		},
 	},
 })
