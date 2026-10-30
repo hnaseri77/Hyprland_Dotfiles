@@ -6,12 +6,23 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 ---- WINDOW MANAGEMENT ----
 ---------------------------
 
--- Window manipulation
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+
+-- Toggle floating mode, resize to compact, and center the window if switching from tiling
+hl.bind(mainMod .. " + W", function()
+    local window = hl.get_active_window()
+    if window then
+        local was_tiled = not window.floating
+        hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+        if was_tiled then
+            hl.dispatch(hl.dsp.window.resize({ x = 900, y = 600 }))
+            hl.dispatch(hl.dsp.window.center(true))
+        end
+    end
+end)
 
 -- Change focus
 hl.bind(mainMod .. " + Left", hl.dsp.focus({ direction = "left" }))
