@@ -2,9 +2,7 @@ local mainMod = "SUPER"
 local noctCall = "noctalia msg "
 local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empty (e.g. "")
 
----------------------------
----- WINDOW MANAGEMENT ----
----------------------------
+---- Window Managment
 
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
