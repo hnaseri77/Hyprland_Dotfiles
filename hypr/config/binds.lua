@@ -2,7 +2,9 @@ local mainMod = "SUPER"
 local noctCall = "noctalia msg "
 local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empty (e.g. "")
 
----- Window Managment
+--------------------------
+---- WINDOW MANAGMENT ----
+--------------------------
 
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -95,7 +97,7 @@ hl.bind(mainMod .. " + ALT + C", hl.dsp.exec_cmd(noctCall .. "panel-toggle sessi
 hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd(noctCall .. "panel-toggle nightwatch75/dns-switcher:panel"))
 hl.bind(mainMod .. " + ALT + W", hl.dsp.exec_cmd(noctCall .. "panel-toggle noctalia/mpvpaper:picker"))
 hl.bind("CONTROL + SHIFT + P", hl.dsp.exec_cmd(noctCall .. "panel-toggle andrewdems/vpn-manager:panel"))
-hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd(launchPrefix .. "zed"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(launchPrefix .. "zed"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(launchPrefix .. "/opt/Telegram/Telegram"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(launchPrefix .. "v2rayn"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(launchPrefix .. "steam"))
