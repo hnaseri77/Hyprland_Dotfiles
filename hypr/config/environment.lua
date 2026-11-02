@@ -1,4 +1,4 @@
--- Environmental variables (for reference https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/)
+-- Environmental variables (for reference https://wiki.hypr.land/configuring/core/environment-variables/)
 -- if you use UWSM, define your variables in ~/.config/uwsm/env
 -- if you don't use UWSM, define your variables here (e.g. hl.env("QT_QPA_PLATFORM", "wayland"))
 
