@@ -13,6 +13,7 @@ hl.monitor({
   supports_wide_color = -1,   -- Force wide color gamut off to avoid color/bitdepth conflicts
   vrr = 0,                    -- Variable Refresh Rate (0 = off, 1 = on, 2 = fullscreen only)
   transform = 0,              -- Monitor orientation transform (0 = normal/no transform, 1-7 = rotations/flips)
+  disabled = false,
 })
 
 -- Laptop Display (3840x2400 @ 59.99Hz)
@@ -26,4 +27,5 @@ hl.monitor({
   supports_wide_color = -1,   -- Force wide color gamut off to prevent sudden brightness jumps
   vrr = 0,                    -- Variable Refresh Rate (0 = off, 1 = on, 2 = fullscreen only)
   transform = 0,              -- Monitor orientation transform (0 = normal/no transform, 1-7 = rotations/flips)
+  disabled = false,
 })
