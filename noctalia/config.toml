@@ -109,7 +109,6 @@ refresh_minutes = 15
     use_event_reminders = true
 
 [control_center]
-circular_avatar = true
 hidden_tabs = [ "weather" ]
 show_avatar_border = true
 show_session_button = true
@@ -484,10 +483,6 @@ scale = 1.0
     volume_output = true
     wifi = true
 
-[plugin_settings."andrewdems/vpn-manager"]
-auto_disconnect_on_trusted = false
-trust_all_ethernet = false
-
 [plugin_settings."nightwatch75/dns-switcher"]
 custom_1 = "Shecan = 178.22.122.100 185.51.200.2"
 custom_2 = "Control D = 76.76.2.0 76.76.10.0"
@@ -520,7 +515,7 @@ enabled = [ "nightwatch75/dns-switcher" ]
     name = "community"
 
 [shell]
-app_icon_colorize = false
+circular_avatar = true
 avatar_path = "/home/cat/Documents/Profile/cat.jpg"
 button_borders = true
 card_borders = true
