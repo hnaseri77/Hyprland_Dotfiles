@@ -9,25 +9,25 @@ hl.config({
 		resize_on_border = true, -- Allows resizing windows by dragging borders with the mouse
 		col = {
 			active_border = {
-				colors = { CACHYLGREEN, CACHYDGREEN },
+				colors = { HYPRLGREEN, HYPRDGREEN },
 				angle = 45,
 			},
-			inactive_border = CACHYGRAY,
+			inactive_border = HYPRGRAY,
 		},
 	},
 	group = {
 		col = {
-			border_active = CACHYLBLUE,
-			border_inactive = CACHYGRAY,
-			border_locked_active = CACHYDBLUE,
-			border_locked_inactive = CACHYGRAY,
+			border_active = HYPRLBLUE,
+			border_inactive = HYPRGRAY,
+			border_locked_active = HYPRDBLUE,
+			border_locked_inactive = HYPRGRAY,
 		},
 		groupbar = {
 			col = {
-				active = CACHYLGREEN,
-				inactive = CACHYGRAY,
-				locked_active = CACHYDBLUE,
-				locked_inactive = CACHYGRAY,
+				active = HYPRLGREEN,
+				inactive = HYPRGRAY,
+				locked_active = HYPRDBLUE,
+				locked_inactive = HYPRGRAY,
 			},
 		},
 	},

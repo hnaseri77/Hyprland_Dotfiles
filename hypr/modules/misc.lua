@@ -11,7 +11,7 @@ hl.config({
 		disable_hyprland_logo = true,
 
 		col = {
-			splash = CACHYLGREEN,
+			splash = HYPRLGREEN,
 		},
 
 		-- Input & window swallowing
